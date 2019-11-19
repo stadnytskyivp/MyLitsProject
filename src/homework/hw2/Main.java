@@ -14,43 +14,43 @@ package homework.hw2;
  і метод який виводить масив і заповнює. +    */
 
 public class Main {
+//
+//    public static void main(String[] args) {
+//
+//        Main myObj = new Main();
+//
+//        Array myArr = new Array(10);
+//
+//        System.out.print("Мy starting Array: ");
+//        myArr.showArray();
+//
+//        myArr.generateArray();
+//
+//        System.out.println("Arithmetic mean of my array = "+myArr.arithmeticMean());
+//
+//        System.out.println("Min value of array = "+myArr.getMin());
+//
+//        System.out.println("Max value of array = "+myArr.getMax());
+//
+//        System.out.print("Values of even numbers = ");
+//        myObj.showArray(myArr.GetEvenArray());
+//
+//        System.out.print("Indexes of even numbers = ");
+//        myArr.showIndexOfEvenNumbs();
+//
+//        System.out.print("Values of odd numbers = ");
+//        myObj.showArray(myArr.GetNotEvenArray());
+//
+//        System.out.print("Indexes of odd numbers = ");
+//        myArr.showIndexOfOddNumbs();
+//    }
+//
+//
+//    public void showArray(int[] arr){
+//        for(int i=0; i<=arr.length-1; i++ ) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        System.out.println("");
+//    }
 
-    public static void main(String[] args) {
-
-        Main myObj = new Main();
-
-        Array myArr = new Array(10);
-
-        System.out.print("Мy starting Array: ");
-        myArr.showArray();
-
-        myArr.generateArray();
-
-        System.out.println("Arithmetic mean of my array = "+myArr.arithmeticMean());
-
-        System.out.println("Min value of array = "+myArr.getMin());
-
-        System.out.println("Max value of array = "+myArr.getMax());
-
-        System.out.print("Values of even numbers = ");
-        myObj.showArray(myArr.GetEvenArray());
-
-        System.out.print("Indexes of even numbers = ");
-        myArr.showIndexOfEvenNumbs();
-
-        System.out.print("Values of odd numbers = ");
-        myObj.showArray(myArr.GetNotEvenArray());
-
-        System.out.print("Indexes of odd numbers = ");
-        myArr.showIndexOfOddNumbs();
-    }
-
-
-    public void showArray(int[] arr){
-        for(int i=0; i<=arr.length-1; i++ ) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println("");
-    }
-// My homework from lesson 2
 }
