@@ -1,16 +1,18 @@
 package homework.hw3;
 
-public class CodeSchool extends HomePage{
+public class HomePage {
 
-    public CodeSchool(String mobileNum){
-        super(mobileNum);
+    private String mobileNum = "+380678266292";
+
+    public HomePage(String mobileNum){
+        this.mobileNum = mobileNum;
     }
+    public HomePage(){}
 
 
-    @Override
+
     public void labelLITSClick() { System.out.println("go back to main page"); }
 
-    @Override
     public void LvivItSchool(int listIndex){
         switch (listIndex) {
             case  (1):
@@ -25,10 +27,9 @@ public class CodeSchool extends HomePage{
         }
 
     }
-    @Override
+
     public void BtnBecomeAStudent(){ System.out.println("go to FEEDBACK FORM"); }
 
-    @Override
     public void cityPickList(int listIndex){
         switch (listIndex) {
             case (1):
@@ -41,5 +42,9 @@ public class CodeSchool extends HomePage{
                 System.out.println("Kharkiv");
                 break;
         }
+    }
+
+    public String getMobileNum(){
+        return mobileNum;
     }
 }
