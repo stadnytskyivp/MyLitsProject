@@ -2,49 +2,94 @@ package homework.hw3;
 
 public class HomePage {
 
+    private String homeURL = "http://lits.ua/";
     private String mobileNum = "+380678266292";
+    private String codeSchool = "Code School";
+    private String qaSchool = "QA School";
+    private String logoLITS = "lits logo";
+    private String lvivItSchool = "Lviv it school";
+    private String becomeStudent = "Become a student";
+    private String myCity = "Lviv";
 
-    public HomePage(String mobileNum){
-        this.mobileNum = mobileNum;
+    public HomePage(String homeURL){
+
+        this.homeURL = homeURL;
+
     }
-    public HomePage(){}
+    public HomePage(){ }
 
 
+    public String btnClick(String btnName){
+        return "click on "+btnName;
+    }
 
-    public void labelLITSClick() { System.out.println("go back to main page"); }
+    public void openURL() { System.out.println(homeURL); }
 
-    public void LvivItSchool(int listIndex){
+    public void logoLITSClick() {
+        setHomeURL("http://lits.ua/");
+        System.out.println(btnClick(logoLITS));
+    }
+
+    public void btnLvivItSchool(){ System.out.println(btnClick(lvivItSchool)); }
+
+    public void selectSchool(int listIndex){
         switch (listIndex) {
-            case  (1):
-                System.out.println("Code School");
+            case (1):
+                System.out.println(btnClick(codeSchool));
                 break;
             case (2):
-                System.out.println("QA School");
+                System.out.println(btnClick(qaSchool));
                 break;
             default:
                 System.out.println("you don't need that!");
                 break;
         }
-
     }
 
-    public void BtnBecomeAStudent(){ System.out.println("go to FEEDBACK FORM"); }
+    public void btnBecomeAStudent(){ System.out.println(btnClick(becomeStudent)); }
 
-    public void cityPickList(int listIndex){
+    public void btnClickOnCity(){ System.out.println(btnClick(myCity)); }
+    
+    public void chooseYourCity(int listIndex){
         switch (listIndex) {
             case (1):
-                System.out.println("Lviv");
+                setMyCity("Lviv");
                 break;
             case (2):
-                System.out.println("Kiyv");
+                setMyCity("Kiyv");
                 break;
             case (3):
-                System.out.println("Kharkiv");
+                setMyCity("Kharkiv");
                 break;
+            default:
+                System.out.println("you don't need that!");
+            break;
+
         }
+        System.out.println(btnClick(myCity));
     }
 
     public String getMobileNum(){
         return mobileNum;
     }
+
+    public String getLogoLITS() {
+        return logoLITS;
+    }
+
+    public void setMyCity(String myCity) {
+        this.myCity = myCity;
+    }
+
+    public String getMyCity() {
+        return myCity;
+    }
+    public String getHomeURL() {
+        return homeURL;
+    }
+    public void setHomeURL(String homeURL) {
+        this.homeURL = homeURL;
+    }
+    public String getCodeSchool() { return codeSchool; }
+    public String getQaSchool() { return qaSchool; }
 }
