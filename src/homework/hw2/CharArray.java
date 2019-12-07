@@ -1,4 +1,4 @@
 package homework.hw2;
 
-public class CharArray {
+public class CharArray extends Array {
 }

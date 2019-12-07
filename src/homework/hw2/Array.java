@@ -131,4 +131,16 @@ public class Array {
         System.out.println(str);
     }
 
+    public int SumOfAllOddIndexes(){
+        int sum=0;
+
+        for (int i=0; i<=arr.length-1; i++){
+            if (arr[i]%2!=0){
+               sum+=i;
+            }
+        }
+
+        return sum;
+    }
+
 }

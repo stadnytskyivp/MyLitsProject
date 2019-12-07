@@ -11,15 +11,18 @@ package homework.hw2;
  повернути масив з непарних значень, +
  вивести індекси масиву, +
  вивести значення які є парні, +
- і метод який виводить масив і заповнює. +    */
+ і метод який виводить масив і заповнює. +
+ Зробити методи: вивести елементи, заповнити масив, повернути суму всіх непарних індексів. */
+
+import java.awt.image.AreaAveragingScaleFilter;
 
 public class Main {
 
     public static void main(String[] args) {
 
         Main myObj = new Main();
-
         Array myArr = new Array(10);
+        //Array myIntArr = new IntegerArray(8);
 
         System.out.print("Мy starting Array: ");
         myArr.showArray();
@@ -43,6 +46,9 @@ public class Main {
 
         System.out.print("Indexes of odd numbers = ");
         myArr.showIndexOfOddNumbs();
+
+        System.out.println("Return sum of all odd indexes = " + myArr.SumOfAllOddIndexes());
+
     }
 
 
