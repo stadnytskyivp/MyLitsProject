@@ -6,38 +6,71 @@ public class Animal implements Eat {
     public void eat(String food) {
     }
 
-    public class Monkey extends Animal {
+    public class Monkey extends Animal{
+
+        private String animalType;
+
+        public Monkey(String animalType){
+            this.animalType = animalType;
+        }
+        public String getAnimal() { return animalType; }
 
         @Override
         public void eat(String food) {
-            if ("banana".equals(food)){
-                System.out.println("Monkey eats "+food);
-            }else{
-                System.out.println("WrongTypeOfFood");
+            try{
+                System.out.print("Monkey ");
+                checkFood("banana",food);
+            }catch (WrongTypeOfFoodException e){
+                System.out.println("eats "+food);
             }
         }
     }
 
     public class Bear extends Animal{
+        private String animalType;
+
+        public Bear(String animalType){
+            this.animalType = animalType;
+        }
+        public String getAnimal() { return animalType; }
+
         @Override
         public void eat(String food) {
-            if ("meat".equals(food)){
-                System.out.println("Bear eats "+food);
-            }else{
-                System.out.println("WrongTypeOfFood");
+            try{
+                System.out.print("Bear ");
+                checkFood("meat",food);
+            }catch (WrongTypeOfFoodException e){
+                System.out.println("eats "+food);
             }
         }
     }
 
     public class Donkey extends Animal{
+        private String animalType;
+
+        public Donkey(String animalType){
+            this.animalType = animalType;
+        }
+        public String getAnimal() { return animalType; }
+
         @Override
         public void eat(String food) {
-            if ("grass".equals(food)){
-                System.out.println("Donkey eats "+food);
-            }else{
-                System.out.println("WrongTypeOfFood");
+            try{
+                System.out.print("Donkey ");
+                checkFood("grass",food);
+            }catch (WrongTypeOfFoodException e){
+                System.out.println("eats "+food);
             }
         }
+    }
+
+    public String checkFood(String iLikeFood,String food) throws WrongTypeOfFoodException{
+        if (iLikeFood.equals(food) ) {
+            throw new WrongTypeOfFoodException("good");
+        }
+        System.out.println("doesn't like "+food);
+        System.out.println("Exception  -WrongTypeOfFood-");
+        return "" ;
     }
 
 }
